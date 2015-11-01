@@ -1,0 +1,28 @@
+{
+  "name": "juancaicedo.github.io",
+  "version": "1.0.0",
+  "description": "The repository for generating juancaicedo.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JuanCaicedo/juancaicedo.github.io.git"
+  },
+  "keywords": [
+    "juan",
+    "caicedo",
+    "node",
+    "javascript",
+    "blog",
+    "developer",
+    "full-stack"
+  ],
+  "author": "Juan Caicedo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanCaicedo/juancaicedo.github.io/issues"
+  },
+  "homepage": "https://github.com/JuanCaicedo/juancaicedo.github.io"
+}
