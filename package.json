@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "The repository for generating juancaicedo.com",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,5 +25,10 @@
   "bugs": {
     "url": "https://github.com/JuanCaicedo/juancaicedo.github.io/issues"
   },
-  "homepage": "https://github.com/JuanCaicedo/juancaicedo.github.io"
+  "homepage": "https://github.com/JuanCaicedo/juancaicedo.github.io",
+  "dependencies": {
+    "handlebars": "4.0.4",
+    "metalsmith": "2.1.0",
+    "metalsmith-markdown": "0.2.1"
+  }
 }
