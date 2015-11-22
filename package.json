@@ -6,8 +6,8 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node build.js"
-    "serve": "./node_modules/nodemon/bin/nodemon.js -e md,scss,css,html,js,json --ignore build/ -- -s"
+    "build": "node build.js",
+    "serve": "nodemon build.js -e md,scss,css,html,js,json --ignore build/ "
   },
   "repository": {
     "type": "git",
