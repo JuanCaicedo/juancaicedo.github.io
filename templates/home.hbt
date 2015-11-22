@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <script src="http://localhost:35729/livereload.js"></script>
-    <title>Home | Metalsmith Page</title>
+    <title>{{ title }} | Metalsmith Page</title>
 </head>
 <body>
     <div class="main-wrapper">
-        <h1 id="this-is-normal-markdown">This is normal markdown</h1>
-
+        {{{ contents }}}
     </div>
 
 </body>

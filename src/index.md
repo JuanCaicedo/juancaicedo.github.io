@@ -1,1 +1,5 @@
-# Metalsmith test ...
+---
+title: Home
+template: home.hbt
+---
+# This is normal markdown
