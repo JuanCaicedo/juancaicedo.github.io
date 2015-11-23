@@ -7,7 +7,9 @@
 </head>
 <body>
     <div class="main-wrapper">
+        {{> header}}
         {{{ contents }}}
+        {{> footer}}
     </div>
 
 </body>

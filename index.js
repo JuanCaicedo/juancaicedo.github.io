@@ -1,8 +1,16 @@
-var Metalsmith = require('metalsmith');
-var markdown = require('metalsmith-markdown');
-var templates = require('metalsmith-templates');
-var watch = require('metalsmith-watch');
-var serve = require('metalsmith-serve');
+const Metalsmith = require('metalsmith');
+const markdown = require('metalsmith-markdown');
+const templates = require('metalsmith-templates');
+const watch = require('metalsmith-watch');
+const serve = require('metalsmith-serve');
+const Handlebars = require('handlebars');
+const fs = require('fs');
+
+const headerFile = fs.readFileSync('./templates/partials/header.hbt');
+const footerFile = fs.readFileSync('./templates/partials/footer.hbt');
+
+Handlebars.registerPartial('header', headerFile.toString());
+Handlebars.registerPartial('footer', footerFile.toString());
 
 Metalsmith(__dirname)
   .source('./src')
@@ -12,7 +20,7 @@ Metalsmith(__dirname)
   .use(watch({
     paths: {
       "${source}/**/*": true,
-      "templates/**/*": "**/*.md",
+      "templates/**/*": true,
     },
     livereload: true,
   }))
