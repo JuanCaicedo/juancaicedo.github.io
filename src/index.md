@@ -1,4 +1,5 @@
 ---
+permalink: false
 title: Home
 template: home.hbt
 ---
