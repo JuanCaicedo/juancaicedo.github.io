@@ -5,6 +5,8 @@ const watch = require('metalsmith-watch');
 const serve = require('metalsmith-serve');
 const collections = require('metalsmith-collections');
 const permalinks = require('metalsmith-permalinks');
+const sass = require('metalsmith-sass');
+const concat = require('metalsmith-concat');
 
 const Handlebars = require('handlebars');
 const fs = require('fs');
@@ -22,9 +24,9 @@ Metalsmith(__dirname)
       pattern: 'content/pages/*.md'
     },
     posts: {
-        pattern: 'content/posts/*.md',
-        sortBy: 'date',
-        reverse: true
+      pattern: 'content/posts/*.md',
+      sortBy: 'date',
+      reverse: true
     }
   }))
   .use(markdown())
@@ -32,7 +34,17 @@ Metalsmith(__dirname)
     pattern: './:collection/:title'
   }))
   .use(templates('handlebars'))
+  .use(sass({
+    outputStyle: "expanded"
+  }))
+  .use(concat({
+    files: 'styles/**/*.css',
+    output: 'styles/app.css'
+  }))
   .destination('./build')
+  .use(serve({
+    port:8000
+  }))
   .use(watch({
     paths: {
       "${source}/**/*": true,
@@ -40,7 +52,6 @@ Metalsmith(__dirname)
     },
     livereload: true,
   }))
-  .use(serve({}))
   .build(function(err) {
     if (err) console.log(err)
   });
