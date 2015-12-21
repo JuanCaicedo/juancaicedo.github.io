@@ -41,9 +41,16 @@ Metalsmith(__dirname)
     files: 'styles/**/*.css',
     output: 'styles/app.css'
   }))
+  .use(concat({
+    files: [
+      'js/**/jquery.js',
+      'js/**/*.js'
+    ],
+    output: 'js/app.js'
+  }))
   .destination('./build')
   .use(serve({
-    port:8000
+    port: 8000
   }))
   .use(watch({
     paths: {

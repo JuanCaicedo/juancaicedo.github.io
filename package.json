@@ -29,8 +29,9 @@
   },
   "homepage": "https://github.com/JuanCaicedo/juancaicedo.github.io",
   "dependencies": {
-    "foundation-sites": "6.0.4",
+    "bootstrap": "3.3.6",
     "handlebars": "2.0.0",
+    "jquery": "2.1.4",
     "metalsmith": "1.7.0",
     "metalsmith-collections": "0.7.0",
     "metalsmith-concat": "3.0.3",
