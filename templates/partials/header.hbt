@@ -7,5 +7,16 @@
     <title>{{ title }}</title>
 </head>
 <body>
-    <h1>Header</h1>
+    <div>
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <ul class="menu">
+              <li class="menu-text">Juan Caicedo</li>
+          {{#each collections}}
+              <li><a href={{@key}}>{{@key}}</a></li>
+          {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="main-wrapper">
