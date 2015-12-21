@@ -7,6 +7,7 @@ const collections = require('metalsmith-collections');
 const permalinks = require('metalsmith-permalinks');
 const sass = require('metalsmith-sass');
 const concat = require('metalsmith-concat');
+const helpers = require('metalsmith-register-helpers');
 
 const Handlebars = require('handlebars');
 const fs = require('fs');
@@ -33,9 +34,12 @@ Metalsmith(__dirname)
   .use(permalinks({
     pattern: './:collection/:title'
   }))
+  .use(helpers({
+    'directory': './helpers/'
+  }))
   .use(templates('handlebars'))
   .use(sass({
-    outputStyle: "expanded"
+    outputStyle: 'expanded'
   }))
   .use(concat({
     files: 'styles/**/*.css',
@@ -54,8 +58,8 @@ Metalsmith(__dirname)
   }))
   .use(watch({
     paths: {
-      "${source}/**/*": true,
-      "templates/**/*": true,
+      '${source}/**/*': true,
+      'templates/**/*': true,
     },
     livereload: true,
   }))

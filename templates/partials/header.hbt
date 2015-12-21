@@ -27,7 +27,9 @@
 
           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1{{@key}}">
           {{#each this}}
-            <li><a href="{{@../key}}/{{this.title}}">{{this.title}}</a></li>
+          {{#nav-link @../key this}}
+            <li><a href="{{link}}">{{title}}</a></li>
+          {{/nav-link}}
           {{/each}}
           </ul>
         </li>
