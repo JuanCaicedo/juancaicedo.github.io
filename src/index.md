@@ -1,6 +1,6 @@
 ---
 permalink: false
 title: Home
-template: home.hbt
+layout: page.hbt
 ---
 # This is normal markdown

@@ -1,5 +1,5 @@
 ---
 title: About
-template: page.hbt
+layout: page.hbt
 ---
 Tell the world something about yourself here!
