@@ -19,19 +19,19 @@ const addProperty = R.curry(function(key, value, files) {
   R.forEach(addPropertyToFile(key, value, files), names);
 });
 
+const getPages = R.curry(function(files, pages, name) {
+  const file = files[name];
+  return R.append({
+    title: file.title,
+    path: file.path
+  }, pages);
+});
+
 const addPages = function(files) {
   const names = R.keys(files);
-  const pages = R.filter(R.test(/html$/), names);
-
-  const links = R.reduce(function(total, name) {
-    const file = files[name];
-    total.push({
-      title: file.title,
-      path: file.path
-    });
-    return total;
-  }, [], pages);
-  addProperty('pages', links, files);
+  const onlyHtml = R.filter(R.test(/html$/), names);
+  const pages = R.reduce(getPages(files), [], onlyHtml);
+  addProperty('pages', pages, files);
 };
 
 Metalsmith(__dirname)
