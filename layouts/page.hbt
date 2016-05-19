@@ -2,17 +2,19 @@
 <html lang="en">
   {{> header}}
   <body>
-    <nav>
-      <a href="/">Juan Caicedo</a>
-      <ul>
-        {{#each pages}}
-          <li>
-            <a href="/{{path}}">{{title}}</a>
-          </li>
-        {{/each}}
-      </ul>
+    <nav class="nav-bar">
+      <div class="container">
+        <a href="/">Juan Caicedo</a>
+        <ul class="nav-links u-pull-right">
+          {{#each pages}}
+            <li class="nav-link">
+              <a href="/{{path}}">{{title}}</a>
+            </li>
+          {{/each}}
+        </ul>
+      </div>
     </nav>
-    <div class="main-wrapper">
+    <div class="container main-wrapper">
       {{{ contents }}}
     </div>
   {{> footer}}
