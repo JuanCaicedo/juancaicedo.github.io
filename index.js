@@ -30,7 +30,8 @@ const getPages = R.curry(function(files, pages, name) {
 const addPages = function(files) {
   const names = R.keys(files);
   const onlyHtml = R.filter(R.test(/html$/), names);
-  const pages = R.reduce(getPages(files), [], onlyHtml);
+  const withoutHome = R.reject(R.test(/index/), onlyHtml);
+  const pages = R.reduce(getPages(files), [], withoutHome);
   addProperty('pages', pages, files);
 };
 
