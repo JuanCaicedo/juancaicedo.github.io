@@ -9,11 +9,9 @@
         </div>
         <div class="nav-section u-pull-right">
           <div class="nav-links">
-            {{#each pages}}
-              <div class="nav-link">
-                <a href="/{{path}}">{{title}}</a>
-              </div>
-            {{/each}}
+            <div class="nav-link">
+              <a href="/about-me">About Me</a>
+            </div>
           </div>
           <div class="nav-link">
             <a href="https://github.com/JuanCaicedo">GitHub</a>

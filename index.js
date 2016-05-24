@@ -19,26 +19,9 @@ const addProperty = R.curry(function(key, value, files) {
   R.forEach(addPropertyToFile(key, value, files), names);
 });
 
-const getPages = R.curry(function(files, pages, name) {
-  const file = files[name];
-  return R.append({
-    title: file.title,
-    path: file.path
-  }, pages);
-});
-
-const addPages = function(files) {
-  const names = R.keys(files);
-  const onlyHtml = R.filter(R.test(/html$/), names);
-  const withoutHome = R.reject(R.test(/index/), onlyHtml);
-  const pages = R.reduce(getPages(files), [], withoutHome);
-  addProperty('pages', pages, files);
-};
-
 Metalsmith(__dirname)
   .source('./src')
   .use(markdown())
-  .use(addPages)
   .use(layouts({
     engine: 'handlebars',
     partials: 'partials'
