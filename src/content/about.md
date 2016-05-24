@@ -23,7 +23,7 @@ Since 2015 I've been lucky engouh to be a part of the team at Curiosity Media,
 where I work on SpanishDict.com, the largest online Spanish-English dictionary.
 
 What I really find most rewarding in technology is interacting with people.
-That's what makes the working in the web, and Javascript specifically, so
+That's what makes the working in the web, and js specifically, so
 wonderful, the great community of people we get to spend time with.
 
 I'm also one of the organizers for NodeDC and NodeSchoolDC.
