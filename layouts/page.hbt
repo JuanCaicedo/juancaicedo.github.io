@@ -4,14 +4,18 @@
   <body>
     <nav class="nav-bar">
       <div class="container">
-        <a href="/">Juan Caicedo</a>
-        <ul class="nav-links u-pull-right">
-          {{#each pages}}
-            <li class="nav-link">
-              <a href="/{{path}}">{{title}}</a>
-            </li>
-          {{/each}}
-        </ul>
+        <div class="nav-section nav-title">
+          <a href="/">Juan Caicedo</a>
+        </div>
+        <div class="nav-section u-pull-right">
+          <div class="nav-links">
+            {{#each pages}}
+              <div class="nav-link">
+                <a href="/{{path}}">{{title}}</a>
+              </div>
+            {{/each}}
+          </div>
+        </div>
       </div>
     </nav>
     <div class="container main-wrapper">

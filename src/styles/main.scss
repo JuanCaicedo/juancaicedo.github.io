@@ -4,6 +4,13 @@ $lightGray: #D7DEE0;
 $darkGray: #949997;
 
 .nav-bar {
+  $navHeight: 60px;
+  background-color: $mainColor;
+
+  .nav-title {
+    font-size: 24px;
+  }
+
   a {
     text-decoration: none;
     font-weight: bold;
@@ -12,13 +19,18 @@ $darkGray: #949997;
       color: $lightGray;
     }
   }
-  background-color: $mainColor;
-}
 
-.nav-links {
-  display: inline-block;
-}
+  .nav-section {
+    line-height: $navHeight;
+    display: inline-block;
+  }
 
-.nav-link {
-  display: inline-block;
+  .nav-links {
+    display: inline-block;
+  }
+
+  .nav-link {
+    display: inline-block;
+    margin-left: 10px;
+  }
 }
