@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+  {{> header}}
+
+  <body>
+    <nav class="nav-bar">
+      <div class="container">
+        <div class="nav-section nav-title">
+          <a href="/">Juan Caicedo</a>
+        </div>
+        <div class="nav-section u-pull-right">
+          <div class="nav-links">
+            <div class="nav-link">
+              <a href="/about-me">About Me</a>
+            </div>
+          </div>
+          <div class="nav-link">
+            <a href="https://github.com/JuanCaicedo">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container main-wrapper">
+      {{{ contents }}}
+    </div>
+
+  </body>
+
+  {{> footer}}
+</html>
