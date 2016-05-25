@@ -26,4 +26,4 @@ What I really find most rewarding in technology is interacting with people.
 That's what makes the working in the web, and js specifically, so
 wonderful, the great community of people we get to spend time with.
 
-I'm also one of the organizers for NodeDC and NodeSchoolDC.
+I'm also one of the organizers for NodeDC and NodeSchoolDC.,
