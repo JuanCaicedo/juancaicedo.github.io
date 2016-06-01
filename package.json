@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node index.js",
     "start": "http-server gh-pages",
-    "dev": "nodemon -e js,md,scss,handlebars,hbt --exec 'npm run build'"
+    "dev": "nodemon -e js,md,scss,handlebars,hbt --exec 'node index.js'"
   },
   "repository": {
     "type": "git",

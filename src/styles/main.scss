@@ -1,3 +1,10 @@
 @import 'variables';
 @import 'modules/navbar';
 @import 'modules/home';
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
